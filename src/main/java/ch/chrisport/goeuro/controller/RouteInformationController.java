@@ -18,12 +18,12 @@ import javax.ws.rs.ext.Provider;
 @Slf4j
 public class RouteInformationController {
 
+    private RouteService directRouteService;
+
     @Autowired
     public RouteInformationController(RouteService directRouteService) {
         this.directRouteService = directRouteService;
     }
-
-    private RouteService directRouteService;
 
     @GET
     @Path(value = "/direct")
